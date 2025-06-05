@@ -1,0 +1,42 @@
+{
+  "name": "ollama-mcp-experiments",
+  "version": "1.0.0",
+  "description": "Offline experiments with Ollama and MCP",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "setup": "npx tsx src/complete-setup.ts",
+    "test": "npx mocha test/integration.test.ts",
+    "test:all": "npx tsx scripts/run-all-tests.ts",
+    "test:comprehensive": "npx mocha test/comprehensive-integration.test.ts",
+    "test:performance": "npx mocha test/performance.test.ts",
+    "examples": "npx tsx src/run-all-examples.ts",
+    "dev": "tsx watch",
+    "build": "tsc",
+    "quick-start": "chmod +x setup-offline.sh && ./setup-offline.sh"
+  },
+  "dependencies": {
+    "ollama": "^0.5.2",
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "chromadb": "^1.8.1",
+    "vectordb": "^0.4.0",
+    "langsmith": "^0.1.0",
+    "node-fetch": "^3.3.2",
+    "ws": "^8.16.0",
+    "uuid": "^9.0.1",
+    "cheerio": "^1.0.0-rc.12",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/mocha": "^10.0.6",
+    "@types/chai": "^4.3.11",
+    "@types/ws": "^8.5.10",
+    "@types/uuid": "^9.0.7",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "tsx": "^4.6.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.0"
+  }
+}
